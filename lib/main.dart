@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:steady_dose_companion_app/scan.dart';
 
 void main() {
   runApp(const MyApp());
@@ -70,7 +70,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                 ), // Spacer to push the text to the center
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    print("skibidi");
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ScanPage()));
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor:
                         Theme.of(context).colorScheme.inversePrimary,
